@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursos Educativos - Historia Educativa</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Casa Borgia</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería de Imágenes</a></li>
+          <li><a href="juegos.html">Juegos de Preguntas</a></li>
+          <li><a href="calendario.html">Calendario</a></li>
+          <li><a href="recursos.html">Recursos Educativos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="recursos">
+        <h2>Recursos</h2>
+        <div class="resources">
+          <ul>
+            <li>
+              <a
+                href="https://es.wikipedia.org/wiki/Casa_de_Borja"
+                target="_blank"
+                >WikiPedia</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.biografiasyvidas.com/biografia/b/borgia.htm"
+                target="_blank"
+                >Recurso Web</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://historia.nationalgeographic.com.es/a/rodrigo-borgia-papa-sin-escrupulos_16019"
+                target="_blank"
+                >National Geographic</a
+              >
+            </li>
+          </ul>
+        </div>
+        <h3>Aportar Información</h3>
+        <form id="contribution-form">
+          <label for="contribution"
+            >¿Tienes información para aportar? Escribenos aquí abajo</label
+          ><br />
+          <textarea
+            id="contribution"
+            name="contribution"
+            rows="4"
+            cols="50"
+          ></textarea
+          ><br />
+          <button type="button" id="submit-button">Enviar</button>
+          <p id="contribution-message" style="display: none"></p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2024 Sitio Web Educativo sobre la Historia de la Casa Borgia.
+        Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

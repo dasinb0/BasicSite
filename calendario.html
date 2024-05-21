@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hechos Históricos - Casa Borgia</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Casa Borgia</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería de Imágenes</a></li>
+          <li><a href="juegos.html">Juegos de Preguntas</a></li>
+          <li><a href="calendario.html">Hechos Históricos</a></li>
+          <li><a href="recursos.html">Recursos Educativos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="hechos-historicos">
+        <h2>Hechos Históricos</h2>
+        <table id="events-table">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Evento</th>
+            </tr>
+          </thead>
+          <tbody id="events-table-body">
+            <!-- Filas de eventos históricos se agregarán aquí -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2024 Sitio Web Educativo sobre la Historia de la Casa Borgia.
+        Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script>
+      const eventosBorja = {
+        1492: [
+          {
+            date: "11/08/1492",
+            event:
+              "Rodrigo Borgia es elegido Papa con el nombre de Alejandro VI",
+          },
+        ],
+
+        1493: [
+          {
+            date: "01/01/1493",
+            event:
+              "Fin de la Reconquista Española con la toma de Granada por los Reyes Católicos, apoyados por Alejandro VI",
+          },
+        ],
+
+        1494: [
+          {
+            date: "25/06/1494",
+            event:
+              "Inicio de la Primera Guerra Italiana entre Francia y la Liga de Venecia, de la que el Papa Alejandro VI fue mediador",
+          },
+        ],
+
+        1495: [
+          {
+            date: "21/10/1495",
+            event:
+              "Nacimiento de Giovanni Borgia, hijo de Alejandro VI y Vanozza dei Cattanei",
+          },
+        ],
+
+        1497: [
+          {
+            date: "01/01/1497",
+            event: "Nombramiento de César Borgia como cardenal",
+          },
+        ],
+
+        1498: [
+          {
+            date: "14/09/1498",
+            event:
+              "Nacimiento de Lucrecia Borgia, hija de Alejandro VI y Vanozza dei Cattanei",
+          },
+        ],
+
+        1499: [
+          {
+            date: "20/08/1499",
+            event:
+              "Nacimiento de Juan Borgia, hijo de Alejandro VI y Vanozza dei Cattanei",
+          },
+        ],
+
+        1500: [{ date: "07/08/1500", event: "Nacimiento de Lucrecia Borgia" }],
+
+        1501: [
+          {
+            date: "31/12/1501",
+            event: "Nacimiento de Juan Borgia, duque de Gandía",
+          },
+        ],
+
+        1502: [
+          {
+            date: "24/06/1502",
+            event: "Matrimonio de Lucrecia Borgia con Giovanni Sforza",
+          },
+        ],
+
+        1503: [
+          {
+            date: "01/08/1503",
+            event: "Ascenso del Papa Alejandro VI (Rodrigo Borgia)",
+          },
+          { date: "13/09/1503", event: "Nacimiento de César Borgia" },
+        ],
+
+        1504: [
+          {
+            date: "24/02/1504",
+            event: "Muerte de Giovanni Sforza, esposo de Lucrecia Borgia",
+          },
+        ],
+
+        1506: [
+          {
+            date: "15/01/1506",
+            event: "Matrimonio de Lucrecia Borgia con Alfonso de Aragón",
+          },
+        ],
+
+        1507: [
+          {
+            date: "18/08/1507",
+            event: "Asesinato de Juan Borgia, duque de Gandía",
+          },
+        ],
+
+        1508: [
+          {
+            date: "14/06/1508",
+            event: "Matrimonio de César Borgia con Carlota de Albret",
+          },
+        ],
+
+        1509: [
+          {
+            date: "08/09/1509",
+            event:
+              "Nacimiento de Rodrigo Borgia, duque de Sermoneta (hijo de César Borgia)",
+          },
+        ],
+
+        1510: [
+          {
+            date: "15/06/1510",
+            event: "Muerte de Alfonso de Aragón, esposo de Lucrecia Borgia",
+          },
+        ],
+
+        1511: [
+          {
+            date: "05/06/1511",
+            event:
+              "Matrimonio de Lucrecia Borgia con Alfonso I d'Este, duque de Ferrara",
+          },
+        ],
+
+        1512: [
+          {
+            date: "11/06/1512",
+            event: "Cesión de la soberanía de Forlì a César Borgia",
+          },
+        ],
+
+        1513: [
+          {
+            date: "11/03/1513",
+            event: "Muerte de Rodrigo Borgia (Papa Alejandro VI)",
+          },
+        ],
+
+        1514: [
+          {
+            date: "30/04/1514",
+            event:
+              "Boda de Lucrecia Borgia con Alfonso I d'Este, duque de Ferrara",
+          },
+        ],
+
+        1515: [
+          {
+            date: "06/07/1515",
+            event:
+              "Boda de Rodrigo Borgia, duque de Sermoneta, con Gerolama Orsini",
+          },
+        ],
+
+        1516: [
+          {
+            date: "17/01/1516",
+            event:
+              "Nacimiento de Pedro Luis Borgia, hijo de César Borgia y Carlota de Albret",
+          },
+        ],
+
+        1517: [
+          {
+            date: "03/08/1517",
+            event: "Boda de Pedro Luis Borgia con María de Mila y Aragón",
+          },
+        ],
+
+        1518: [
+          {
+            date: "31/03/1518",
+            event:
+              "Boda de Rodrigo Borgia, duque de Sermoneta, con Isabel de Milán",
+          },
+        ],
+
+        1519: [{ date: "24/06/1519", event: "Muerte de Lucrecia Borgia" }],
+        1520: [
+          {
+            date: "12/08/1520",
+            event:
+              "Nacimiento de Francesco Borgia, hijo de Rodrigo Borgia, duque de Sermoneta",
+          },
+        ],
+        1521: [
+          {
+            date: "01/11/1521",
+            event:
+              "Boda de Rodrigo Borgia, duque de Sermoneta, con Francina Orsini",
+          },
+        ],
+        1522: [
+          {
+            date: "25/08/1522",
+            event:
+              "Nacimiento de Isabel Borgia, hija de Rodrigo Borgia, duque de Sermoneta",
+          },
+        ],
+        1523: [
+          {
+            date: "05/09/1523",
+            event:
+              "Boda de Isabel Borgia con Fernando d'Aragón, duque de Bisceglie",
+          },
+        ],
+        1524: [
+          {
+            date: "02/01/1524",
+            event: "Muerte de César Borgia en Viana, Navarra",
+          },
+        ],
+        1526: [
+          {
+            date: "18/10/1526",
+            event: "Muerte de Rodrigo Borgia, duque de Sermoneta",
+          },
+        ],
+        1530: [
+          {
+            date: "11/11/1530",
+            event:
+              "Boda de Rodrigo Borgia, duque de Sermoneta, con Vittoria Giordano Orsini",
+          },
+        ],
+        1533: [
+          {
+            date: "06/06/1533",
+            event:
+              "Nacimiento de Isabel Borgia, hija de Rodrigo Borgia, duque de Sermoneta",
+          },
+        ],
+        1534: [{ date: "12/03/1534", event: "Muerte de César Borgia" }],
+        1535: [
+          {
+            date: "23/09/1535",
+            event:
+              "Boda de Isabel Borgia con Pier Luigi Farnesio, duque de Parma y Piacenza",
+          },
+        ],
+        1538: [
+          {
+            date: "24/06/1538",
+            event:
+              "Nacimiento de Rodolfo Borgia, hijo de Rodrigo Borgia, duque de Sermoneta",
+          },
+        ],
+        1540: [
+          {
+            date: "17/07/1540",
+            event:
+              "Boda de Rodolfo Borgia con Victoria de Requesens, condesa de Palamós",
+          },
+        ],
+        1541: [
+          {
+            date: "29/12/1541",
+            event: "Muerte de Rodrigo Borgia, duque de Sermoneta",
+          },
+        ],
+      };
+
+      function mostrarEventosHistoricos() {
+        const tableBody = document.getElementById("events-table-body");
+        tableBody.innerHTML = "";
+
+        for (const year in eventosBorja) {
+          const eventosDelAño = eventosBorja[year];
+          eventosDelAño.forEach((evento) => {
+            const row = document.createElement("tr");
+
+            const dateCell = document.createElement("td");
+            dateCell.textContent = evento.date;
+            row.appendChild(dateCell);
+
+            const eventCell = document.createElement("td");
+            eventCell.textContent = evento.event;
+            row.appendChild(eventCell);
+
+            tableBody.appendChild(row);
+          });
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", (event) => {
+        mostrarEventosHistoricos();
+      });
+    </script>
+  </body>
+</html>
